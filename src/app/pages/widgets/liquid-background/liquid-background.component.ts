@@ -116,17 +116,14 @@ export class LiquidBackgroundComponent implements OnInit, AfterViewInit, OnDestr
         point.vy += -pushY;
       }
 
-      // Spring force back to original position
       const dx2 = point.originalX - point.x;
       const dy2 = point.originalY - point.y;
       point.vx += dx2 * this.stiffness;
       point.vy += dy2 * this.stiffness;
 
-      // Apply velocity with damping
       point.vx *= this.damping;
       point.vy *= this.damping;
 
-      // Update position
       point.x += point.vx;
       point.y += point.vy;
     });
@@ -169,7 +166,6 @@ export class LiquidBackgroundComponent implements OnInit, AfterViewInit, OnDestr
     const canvas = this.canvasRef.nativeElement;
     this.ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // Add slight blur for smooth effect
     this.ctx.filter = 'blur(1px)';
 
     this.updatePoints();
@@ -177,10 +173,9 @@ export class LiquidBackgroundComponent implements OnInit, AfterViewInit, OnDestr
 
     this.ctx.filter = 'none';
 
-    // Throttle to 30 FPS
     setTimeout(() => {
       this.animationFrame = requestAnimationFrame(() => this.animate());
-    }, 1000 / 30); // 30 FPS
+    }, 1000 / 100);
   }
 
   private cleanup() {

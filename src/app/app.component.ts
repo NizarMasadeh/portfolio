@@ -40,10 +40,8 @@ export class AppComponent implements OnInit {
   loading$ = this.loadingService.loading$;
 
   ngOnInit() {
-    // Initialize Lenis smooth scrolling
     this.scrollService.initLenis();
 
-    // Simulate loading time
     setTimeout(() =>
       this.loadingService.setLoading(false),
       2000);

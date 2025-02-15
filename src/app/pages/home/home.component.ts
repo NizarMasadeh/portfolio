@@ -74,7 +74,6 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     gsap.registerPlugin(ScrollTrigger);
 
-    // Animate hero section
     gsap.from('.hero-content', {
       opacity: 0,
       y: 50,
@@ -82,7 +81,6 @@ export class HomeComponent implements OnInit {
       ease: 'power3.out'
     });
 
-    // Animate scroll indicator
     gsap.from('.scroll-indicator', {
       opacity: 0,
       y: 20,
@@ -91,7 +89,6 @@ export class HomeComponent implements OnInit {
       ease: 'power3.out'
     });
 
-    // Animate skill cards
     gsap.utils.toArray('.skill-card').forEach((card: any, index: number) => {
       gsap.from(card, {
         scrollTrigger: {
@@ -105,7 +102,6 @@ export class HomeComponent implements OnInit {
         delay: index * 0.2,
         ease: 'power3.out',
         onComplete: () => {
-          // Animate skill progress bar
           const progress = card.querySelector('.skill-progress');
           if (progress) {
             gsap.to(progress, {
