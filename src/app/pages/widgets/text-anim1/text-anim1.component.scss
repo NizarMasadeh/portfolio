@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:900&display=swap");
+
+body {
+    margin: 0px;
+}
+
+#container {
+    // position: fixed;
+    // margin: auto;
+    // width: 100vw;
+    // height: 80pt;
+    // top: 0;
+    // bottom: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    filter: url(#threshold);
+}
+
+#text1,
+#text2 {
+    position: fixed;
+    height: 60%;
+    display: inline-block;
+    // font-family: NZRM !important;
+    font-size: 5rem;
+    font-weight: 900;
+    text-align: center;
+    user-select: none;
+}
+
+@media (max-width: 750px) {
+
+    #text1,
+    #text2 {
+        font-size: 4rem;
+    }
+}

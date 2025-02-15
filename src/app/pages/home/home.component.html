@@ -1,0 +1,47 @@
+<!-- <div class="background-gradient"></div> -->
+
+
+<div class="home-container">
+    <!-- <app-liquid-background></app-liquid-background> -->
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="glitch-container">
+                <h1 class="title">NZRM</h1>
+            </div>
+            <div class="textContainer flex justify-content-center align-items-center">
+
+                <goofy-text-anim1></goofy-text-anim1>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll to discover my expertise</span>
+            <div class="arrow"></div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <!-- Skills Section -->
+    <section class="skills-showcase">
+        <h2 class="section-title">My Expertise</h2>
+        <div class="skills-grid">
+            <div class="skill-card" *ngFor="let skill of skills; let i = index" [attr.data-index]="i">
+                <div class="skill-header">
+                    <div class="skill-icon" [style.background]="skill.color">
+                        <i [class]="skill.icon"></i>
+                    </div>
+                    <h3>{{skill.name}}</h3>
+                </div>
+                <p class="skill-description">{{skill.description}}</p>
+                <div class="skill-bar-container">
+                    <div class="skill-bar">
+                        <div class="skill-progress" [attr.data-progress]="skill.experience"
+                            [style.width.%]="skill.experience">
+                        </div>
+                    </div>
+                    <span class="progress-label">{{skill.experience}}%</span>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
