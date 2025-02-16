@@ -56,7 +56,7 @@ app-liquid-background {
 
 .subtitle {
     font-size: 1.5rem;
-    color: var(--purple-300);
+    color: var(--text-secondary-color);
     margin-top: 1rem;
 
     transform: translateY(30px);
@@ -168,10 +168,11 @@ app-liquid-background {
     backdrop-filter: blur(10px);
     transform: translateY(0);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-
+    cursor: pointer;
+    transition: .4s ease-in-out;
     &:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, -0.03);
+    box-shadow: 0 10px 20px rgba(58, 58, 58, 0.3);
     }
 }
 
@@ -195,7 +196,7 @@ app-liquid-background {
 }
 
 .skill-description {
-    color: var(--purple-300);
+    color: var(--surface-400);
     margin-bottom: 1.5rem;
 }
 
@@ -212,7 +213,7 @@ app-liquid-background {
 
 .skill-progress {
     height: 100%;
-    background: linear-gradient(90deg, var(--purple-300), var(--purple-500));
+    background: linear-gradient(90deg, var(--surface-900), var(--surface-200));
     border-radius: 4px;
     width: 0;
     transition: width 1.5s ease-out;
@@ -222,7 +223,7 @@ app-liquid-background {
     position: absolute;
     right: 0;
     top: -1.5rem;
-    color: var(--purple-200);
+    color: var(--surface-500);
 }
 
 .progress-label {
@@ -296,7 +297,11 @@ app-liquid-background {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, var(--purple-900), var(--purple-800));
+    background: linear-gradient(135deg, var(--surface-ground), var(--surface-section));
+    
+    &::before {
+        background: radial-gradient(circle, var(--surface-hover) 0%, transparent 50%);
+    }
     position: relative;
     padding: 2rem;
 }
@@ -309,7 +314,7 @@ app-liquid-background {
 .title {
     font-size: 6rem;
     margin-bottom: 1rem;
-    color: var(--purple-100);
+    color: var(--surface-600);
 }
 
 .subtitle {
@@ -320,7 +325,7 @@ app-liquid-background {
 .section-title {
     text-align: center;
     margin-bottom: 4rem;
-    color: var(--purple-100);
+    color: var(--primary-color);
 }
 
 
@@ -328,7 +333,7 @@ app-liquid-background {
     position: absolute;
     right: 0;
     top: -1.5rem;
-    color: var(--purple-200);
+    color: var(--surface-400);
 }
 
 .scroll-indicator {

@@ -10,7 +10,20 @@ export const routes: Routes = [
         component: HomeComponent,
         data: { animation: 'HomePage' }
     },
-    { path: 'about', component: AboutComponent },
-    { path: 'projects', component: ProjectsComponent },
-    { path: 'contact', component: ContactComponent }
+    {
+        path: 'about',
+        component: AboutComponent,
+        data: { animation: 'AboutPage' }
+
+    },
+    {
+        path: 'projects',
+        component: ProjectsComponent,
+        data: { animation: 'ProjectsPage' }
+    },
+    {
+        path: 'contact',
+        component: ContactComponent,
+        data: { animation: 'ContactPage' }
+    }
 ];
