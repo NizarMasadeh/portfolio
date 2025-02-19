@@ -12,8 +12,7 @@
                 </div>
             </div>
             <div class="textContainer flex justify-content-center align-items-center">
-
-                <goofy-text-anim1></goofy-text-anim1>
+                <goofy-text-anim1 *ngIf="showGoofyText" [ngClass]="showGoofyText ? 'fadeIn-high' : ''"></goofy-text-anim1>
             </div>
         </div>
         <div class="scroll-indicator">

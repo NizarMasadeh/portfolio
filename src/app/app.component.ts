@@ -5,15 +5,17 @@ import Lenis from '@studio-freight/lenis';
 import { LoadingService } from './services/loading.service';
 import { ScrollService } from './services/scroll.service';
 import { animate, style, transition, trigger } from '@angular/animations';
+import { NavMenuComponent } from "./layout/nav-menu/nav-menu.component";
 
 @Component({
   selector: 'app-root',
   imports: [
     CommonModule,
     RouterOutlet,
-    RouterLink,
-    RouterLinkActive
-  ],
+    // RouterLink,
+    // RouterLinkActive,
+    NavMenuComponent
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   animations: [

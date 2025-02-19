@@ -11,13 +11,15 @@
 
 <div class="main-container" [class.loaded]="!(loading$ | async)">
   <nav>
-    <div class="logo">NZRM</div>
-    <div class="nav-links">
+    <!-- <div class="logo">NZRM</div> -->
+    <!-- <div class="nav-links">
       <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
       <a routerLink="/about" routerLinkActive="active">About</a>
       <a routerLink="/projects" routerLinkActive="active">Projects</a>
       <a routerLink="/contact" routerLinkActive="active">Contact</a>
-    </div>
+    </div> -->
+
+    <app-nav-menu></app-nav-menu>
   </nav>
 
   <main [@routeAnimations]="prepareRoute(outlet)">

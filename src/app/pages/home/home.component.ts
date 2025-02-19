@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, ElementRef, inject, OnInit } from '@angular/core';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { LiquidBackgroundComponent } from "../widgets/liquid-background/liquid-background.component";
+// import { LiquidBackgroundComponent } from "../widgets/liquid-background/liquid-background.component";
 import { TextAnim1Component } from "../widgets/text-anim1/text-anim1.component";
 
 interface Skill {
@@ -17,7 +17,7 @@ interface Skill {
   selector: 'app-home',
   imports: [
     CommonModule,
-    LiquidBackgroundComponent,
+    // LiquidBackgroundComponent,
     TextAnim1Component
   ],
   templateUrl: './home.component.html',
@@ -25,6 +25,8 @@ interface Skill {
 })
 export class HomeComponent implements OnInit {
   private el = inject(ElementRef);
+
+  showGoofyText: boolean = false;
 
   skills = [
     {
@@ -72,6 +74,10 @@ export class HomeComponent implements OnInit {
   ];
 
   ngOnInit() {
+    
+    setTimeout(() => {
+      this.showGoofyText = true;
+    }, 2000);
     gsap.registerPlugin(ScrollTrigger);
 
     gsap.from('.hero-content', {
