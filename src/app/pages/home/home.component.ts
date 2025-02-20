@@ -4,6 +4,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 // import { LiquidBackgroundComponent } from "../widgets/liquid-background/liquid-background.component";
 import { TextAnim1Component } from "../widgets/text-anim1/text-anim1.component";
+import { CardsStackComponent } from "../../layout/cards-stack/cards-stack.component";
 
 interface Skill {
   name: string;
@@ -18,8 +19,9 @@ interface Skill {
   imports: [
     CommonModule,
     // LiquidBackgroundComponent,
-    TextAnim1Component
-  ],
+    TextAnim1Component,
+    CardsStackComponent
+],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

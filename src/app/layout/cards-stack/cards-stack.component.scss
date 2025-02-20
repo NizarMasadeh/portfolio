@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:host {
+    font-family: "PP Neue Montreal";
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+section {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    left: 0 !important;
+}
+
+section.sticky-cards {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 100% !important;
+    max-height: 400vh !important;
+}
+
+.sticky-cards {
+    background-color: var(--surface-0);
+}
+
+.card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    will-change: transform;
+    width: 25%;
+    height: 50%;
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    grid-area: 0.5em;
+    background-color: #202020;
+    color: #fff;
+}
+
+.card-img {
+    flex: 1 1 0;
+    min-height: 0;
+    width: 100%;
+}
+
+.card-content {
+    flex: 0 0 12px;
+    display: flex;
+    align-items: center;
+}
+
+.card-content p {
+    text-transform: uppercase;
+    font-family: "Akkurat Mono";
+    font-size: 12px;
+}
+
+@media(max-width: 900px) {
+    .card {
+        width: 75%;
+    }
+}
