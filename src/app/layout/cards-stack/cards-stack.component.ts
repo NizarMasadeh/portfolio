@@ -13,7 +13,7 @@ import Lenis from '@studio-freight/lenis';
   styleUrl: './cards-stack.component.scss',
 })
 export class CardsStackComponent implements OnInit, AfterViewInit {
-  cards = new Array(6); // Creates array of 6 elements for ngFor
+  cards = new Array(6);
   private rotations = [-12, 10, -5, 5, -5, -2];
 
   constructor() {
@@ -37,7 +37,7 @@ export class CardsStackComponent implements OnInit, AfterViewInit {
 
     cards.forEach((card: any, index: number) => {
       gsap.set(card, {
-        y: window.innerHeight,
+        y: window.innerHeight / 2,
         rotate: this.rotations[index],
       });
     });

@@ -8,8 +8,8 @@ import { AfterViewInit, Component, ElementRef } from '@angular/core';
 export class TextAnim1Component implements AfterViewInit {
 
   private texts = [
-    "Frontend",
-    "Backend",
+    "FulllStack Developer",
+    "NestJs Obsessed",
     "Guitarist",
     "Poet",
     "Author",

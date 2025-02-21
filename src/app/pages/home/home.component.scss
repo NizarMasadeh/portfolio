@@ -412,3 +412,7 @@ app-liquid-background {
     position: relative;
     background: linear-gradient(to top, rgb(0 0 0), rgb(0 0 0), rgb(0 0 0), rgb(0 0 0), rgb(0 0 0 / 1%));
 }
+
+.textContainer {
+    min-height: 200px !important;
+}

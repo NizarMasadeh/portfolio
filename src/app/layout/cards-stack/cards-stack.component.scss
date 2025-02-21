@@ -19,7 +19,9 @@ section {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    background-color: var(--surface-ground);
     left: 0 !important;
+    transition: opacity .3s ease !important;
 }
 
 section.sticky-cards {
@@ -39,14 +41,22 @@ section.sticky-cards {
     left: 50%;
     transform: translate(-50%, -50%);
     will-change: transform;
-    width: 25%;
+    // width: 25%;
+    width: 300px;
     height: 50%;
     padding: 0.5em;
     display: flex;
     flex-direction: column;
     grid-area: 0.5em;
-    background-color: #202020;
+    background-color: black;
     color: #fff;
+    border: 2px solid var(--surface-border);
+    transition: box-shadow .3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(117, 117, 117, 0.24) !important; 
 }
 
 .card-img {

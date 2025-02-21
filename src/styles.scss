@@ -9,6 +9,11 @@
     src: url("./assets/fonts/ArchitectsDaughter-Regular.ttf");
 }
 
+@font-face {
+    font-family: canopee;
+    src: url(/src/assets/fonts/Canopee\ Regular.otf);
+}
+
 :root {
     --brand-purple: #6f3f8c;
     --brand-purple-light: #a069bb;
@@ -46,7 +51,7 @@ html.lenis {
 
 body {
     margin: 0;
-    font-family: 'Inter', sans-serif;
+    font-family: canopee;
     background: var(--surface-ground);
     color: var(--text-color);
     line-height: 1.6;
@@ -255,4 +260,35 @@ button {
 ::selection {
     background: var(--purple-500);
     color: var(--purple-100);
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.fadeIn-low {
+    animation: fadeIn .3s;
+}
+
+.fadeIn-med {
+    animation: fadeIn .5s;
+}
+
+.fadeIn-high {
+    animation: fadeIn .8s;
+}
+
+.fadeIn-1 {
+    animation: fadeIn .5s;
+}
+
+.fadeIn-2 {
+    animation: fadeIn .8s;
 }
